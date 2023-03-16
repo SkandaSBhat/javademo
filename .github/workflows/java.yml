@@ -1,6 +1,7 @@
 name: Java application 
 
-on: work_dispatch:
+on:
+work_dispatch:
   push: 
     branches: [master .]
   pull request:
@@ -9,7 +10,7 @@ on: work_dispatch:
   jobs:
   build:
 
-    runs-on: Fedor-latest
+    runs-on: Ubuntu-latest
 
     steps:
     - uses: actions/checkout@v1
