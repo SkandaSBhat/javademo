@@ -1,13 +1,16 @@
 name: Java application 
 
 on:
-work_dispatch:
+  work_dispatch:
   push: 
-    branches: [master .]
+    branches:
+      - main
   pull request:
-    branches: [master .]             
+    branches: 
+      - main           
 
-  jobs:
+
+jobs:
   build:
 
     runs-on: Ubuntu-latest
