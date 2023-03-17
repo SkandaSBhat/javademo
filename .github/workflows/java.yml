@@ -17,5 +17,11 @@ work_dispatch:
     - name: Build & Push Image
       run: |
         echo "${{ secrets.DOCKERPW }}" | docker login -u "skandasbhat" --password-stdin
-        docker image build -t skandasbhat/hello-java .
-        docker push skandasbhat/hello-java
+        docker image build -t skandasbhat/hello-java:latest .
+        docker push skandasbhat/hello-java:latest
+        
+    - name: run Image
+      run: |
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "skandasbhat" --password-stdin
+        docker pull skandasbhat/hello-java:latest
+        docker run skandasbhat/hello-java:latest
