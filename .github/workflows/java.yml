@@ -1,11 +1,11 @@
 name: Java application 
 
 on:
-  work_dispatch:
+  workflow_dispatch:
   push: 
     branches:
       - main
-  pull request:
+  pull_request:
     branches: 
       - main           
 
